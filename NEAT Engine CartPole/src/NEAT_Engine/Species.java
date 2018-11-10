@@ -45,9 +45,6 @@ public class Species {
 	}
 
 	void addAI(AI AI) {
-		if (AI.getFitness() > best_fitness) {
-			best_fitness = AI.getFitness();
-		}
 
 		avarage_fitness = (avarage_fitness * AIs.size() + AI.getFitness()) / (AIs.size() + 1);
 
@@ -112,7 +109,6 @@ public class Species {
 
 		Object[] Diff = getNNDif(AI.getConnections(), rep);
 
-		//
 		return (NEAT_Engine.compatibilityThreshold > (NEAT_Engine.excessCoeff * ((int) Diff[0]) / largeGenomeNormaliser)
 				+ (NEAT_Engine.weightDiffCoeff * ((float) Diff[1])));
 	}

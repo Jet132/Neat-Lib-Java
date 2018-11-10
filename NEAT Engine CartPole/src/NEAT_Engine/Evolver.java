@@ -155,8 +155,8 @@ public class Evolver {
 	void cullSpecies() {
 		for (Species s : NEAT_Engine.Species) {
 			s.cull();
-			s.shareFitness();
 			s.setAvarage();
+			s.shareFitness();
 		}
 	}
 
