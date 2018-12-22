@@ -84,7 +84,7 @@ public class Evolver {
 			int NoOfChildren = (int) (NEAT_Engine.Species.get(i).getAvarageFitness() / fitnessSum
 					* NEAT_Engine.AIs.length);
 			for (int j = 0; j < NoOfChildren; j++) {
-				children.add(NEAT_Engine.Species.get(i).makeChild(NEAT_Engine.InoHis, (random.nextInt(100) < 0.1)));
+				children.add(NEAT_Engine.Species.get(i).makeChild(NEAT_Engine.InoHis, (random.nextFloat()*100 < 0.1)));
 			}
 		}
 
